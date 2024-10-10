@@ -1,0 +1,141 @@
+/* Base Styles - Mobile First */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation Buttons */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 10px 10px;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 30px 40px;
+  background-color: #101658;
+  color: gold;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  align-items: center;
+  font-size: 40px;
+  width: 10rem;
+}
+
+/* Hover and Focus Styles */
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #0056b3;
+  outline: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Image Styling */
+figure {
+  display: grid;
+  justify-items: center;
+}
+
+figure img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+article {
+  margin-bottom: 1rem;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+footer img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Queries for Tablets and Larger Screens */
+@media (min-width: 600px) {
+  header {
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+  }
+
+  nav ul {
+      gap: 15px;
+  }
+
+  main {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
+  section {
+      width: 80%;
+      margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+
+  section {
+      width: 100%;
+      margin: 0;
+  }
+
+  header {
+      grid-template-columns: 1fr auto;
+      justify-items: start;
+      text-align: left;
+  }
+}
