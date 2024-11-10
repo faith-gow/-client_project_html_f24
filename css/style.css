@@ -47,32 +47,36 @@ header img {
   height: auto;
 }
 
+
+li {
+  margin: 10px;
+}
+
 /* Navigation Buttons */
 nav ul {
   list-style: none;
   padding: 0;
-  display: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  display: flex;
+  gap: 10px; 
+  justify-content: center; /* Center align buttons horizontally */
+  flex-wrap: nowrap; 
 }
 
 nav ul li {
-  margin: 10px 10px;
+  margin: 0;
 }
 
 nav ul li a {
   display: inline-block;
-  padding: 30px 40px;
+  padding: 15px 20px; /* Reduces padding for smaller buttons */
   background-color: #101658;
   color: gold;
   text-decoration: none;
-  border-radius: 10px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-size: 15px; /* Smaller font size */
   transition: background-color 0.3s ease;
   text-align: center;
-  align-items: center;
-  font-size: 40px;
-  width: 10rem;
+  width: auto; /* Adjust width to content */
 }
 
 /* Hover and Focus Styles */
