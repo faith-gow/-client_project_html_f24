@@ -59,6 +59,45 @@ li {
   margin: 10px;
 }
 
+/* Inline styles for unique 404 page styling */
+.error-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.error-title {
+  font-size: 3em;
+  color: #101658;
+}
+
+.error-message {
+  font-size: 1.5em;
+  color: #333;
+  width: 100%;
+  display: block; /* Make it span across the width */
+  text-align: center; /* Center-align the text */
+  margin: 20px 0; /* Add vertical spacing */
+}
+
+.back-link {
+  display: block; /* Make it span across the width */
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px 0; /* Increase padding for a full-width button */
+  background-color: #101658;
+  color: gold;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 2em;
+  text-align: center; /* Center-align the button text */
+  transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #0056b3;
+}
+
+
 /* Active Page Indicator */
 nav ul li a.active {
   background-color: #0056b3; 
