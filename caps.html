@@ -15,7 +15,7 @@
             <ul>
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "cew.html">CEW+</a></li>
-                <li><a href = "caps.html">CAPS</a></li>
+                <li><a href = "caps.html" class="active">CAPS</a></li>
                 <li><a href = "tutoring.html">Tutoring</a></li>
             </ul>
         </nav>
@@ -25,24 +25,75 @@
     <main id="main">
         <div>
         <p> We are happy to offer both in-person and virtual services. CAPS is committed to creating an environment based on our values of multicultural, multi-disciplinary and multi-theoretical practices that allow our diverse student body to access care, receive high quality services and take positive pathways to mental health.
-
-    Our Front Desk (Michigan Union 4th Floor) is open and ready to help support you -- staff members are available throughout the day to assist you with your needs to answer questions, and get you to the right place. We can be reached by phone at: (734) 764-8312.
-    
-    CAPS has a limited number of private spaces available for students to connect with their counselor via telecounseling. Please contact the front desk for more information on those private spaces.
-    
-    Please Note: During high-demand periods, CAPS will be unable to accommodate class-related interviews and/or projects. Many students are able to find the information they need within our website and our annual reports.
-    
-    CAPS office is unable to participate in scavenger hunts for students due to maintaining the confidentiality of our clients. However, you are welcome to direct students to the wellness zone, which has a separate entrance adjacent to CAPS. If you have any questions, please feel free to contact the CAPS office.</p>
+            
+        Our Front Desk (Michigan Union 4th Floor) is open and ready to help support you -- staff members are available throughout the day to assist you with your needs to answer questions, and get you to the right place. We can be reached by phone at: (734) 764-8312.
         </div>
+        <div><p>CAPS has a limited number of private spaces available for students to connect with their counselor via telecounseling. Please contact the front desk for more information on those private spaces.</p>
 
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <p><br>Please Note: During high-demand periods, CAPS will be unable to accommodate class-related interviews and/or projects. Many students are able to find the information they need within our website and our annual reports.
+           
+        CAPS office is unable to participate in scavenger hunts for students due to maintaining the confidentiality of our clients. However, you are welcome to direct students to the wellness zone, which has a separate entrance adjacent to CAPS. If you have any questions, please feel free to contact the CAPS office.
+        </p></div>
+
+         <!-- Anonymous Feedback Form -->
+          <!--citation: https://www.freecodecamp.org/news/how-to-submit-a-form-with-javascript/, chatGPT for styling-->
+    <section>
+        <h2>Anonymous Feedback</h2>
+        <p>We appreciate your feedback to help us improve our services.</p>
+        <form id="feedbackForm">
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Enter your feedback here..." required></textarea>
+            
+            <label for="email">Email (optional):</label>
+            <input type="email" id="email" name="email" placeholder="Your email (optional)">
+            
+            <button type="submit">Submit Feedback</button>
+            <p id="feedbackMessage"></p>
+        </form>
+    </section>
+    
     </main>
+
     <footer>
-        <p>Counseling and Psychological Services | <a href="https://caps.umich.edu/">CAPS</a></p>
+        <p>Counseling and Psychological Services | <a href="https://caps.umich.edu/">CAPS</a>| © Copyrights <span id="year"></span> by CodexWorld. All rights reserved. </p>
     </footer>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear(); //Assigned: updated date 
+
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const feedback = document.getElementById("feedback").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const feedbackMessage = document.getElementById("feedbackMessage");
+
+        // Clear previous messages
+        feedbackMessage.textContent = "";
+
+        // Validate feedback field
+        if (feedback === "") {
+            feedbackMessage.style.color = "red";
+            feedbackMessage.textContent = "Please enter your feedback before submitting.";
+            return;
+        }
+
+        // Optional: Validate email format if provided
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (email && !emailPattern.test(email)) {
+            feedbackMessage.style.color = "red";
+            feedbackMessage.textContent = "Please enter a valid email address.";
+            return;
+        }
+
+        // If validation passes, show success message
+        feedbackMessage.style.color = "#28a745";
+        feedbackMessage.textContent = "Thank you for your feedback!";
+
+        // Reset form fields after submission
+        document.getElementById("feedbackForm").reset();
+    });
+    </script>
 
 </body>
 

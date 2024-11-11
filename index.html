@@ -13,7 +13,7 @@
         <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
         <nav>
             <ul>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href = "index.html" class="active">Home</a></li>
                 <li><a href = "cew.html">CEW+</a></li>
                 <li><a href = "caps.html">CAPS</a></li>
                 <li><a href = "tutoring.html">Tutoring</a></li>
@@ -25,8 +25,8 @@
     <main id="main">
         <section>
             <h2>Welcome to the UM Grad Success Navigator</h2>
-            <p> Your Comprehensive Guide to Resources for Graduate School Success</p>
-            <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
+            <p id="firstp"> Your Comprehensive Guide to Resources for Graduate School Success</p>
+            <p><br>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
             <ol>
                 <li>Academic Resources</li>
                 <li>Physical Health</li>
@@ -34,6 +34,11 @@
                 <li>Life Outside Classroom</li>
                 <li>Contact</li>
             </ol>
+            <br>
+            <br>
+            <figure>
+                  <img src="images/fall.jpg" alt="Fall Campus">
+            </figure>
         </section>
         <section>
             <h2>Physical Health</h2>
@@ -55,7 +60,6 @@
                 <p>Participate in various fitness programs, sports clubs, and use of gym facilities to stay active and healthy.</p>
             </article>
         </section>
-        
         <section>
             <h2>Mental Health</h2>
             <p>Maintaining your mental well-being is crucial for thriving in graduate school. Here are resources to support your mental health:</p>
@@ -99,8 +103,10 @@
         UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
     </main>
     <footer>
-       
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-        </footer>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a>| © Copyrights <span id="year"></span> by CodexWorld. All rights reserved. </p>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>    
+    </footer>
 </body>
 </html>

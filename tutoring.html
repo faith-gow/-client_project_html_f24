@@ -10,13 +10,13 @@
 <body>
     <a class= "skip-main" href = #main>Skip to Main Content</a>
     <header>
-        <img src="images/flowers.jpg" alt="Yellow Flowers">
+        <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "cew.html">CEW+</a></li>
                 <li><a href = "caps.html">CAPS</a></li>
-                <li><a href = "tutoring.html">Tutoring</a></li>
+                <li><a href = "tutoring.html"  class="active">Tutoring</a></li>
             </ul>
         </nav>
         <h1>UMSI Tutoring & Academic Support</h1>
@@ -42,8 +42,11 @@
             <div></div>
     </main>
     <footer>
-        <p>MSI Tutoring | <a href="https://sites.google.com/umich.edu/umsitutoring/home?pli=1&authuser=1">UMSI Academic Success</a></p>
+        <p>MSI Tutoring | <a href="https://sites.google.com/umich.edu/umsitutoring/home?pli=1&authuser=1">UMSI Academic Success</a>| © Copyrights <span id="year"></span> by CodexWorld. All rights reserved. </p>
     </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
